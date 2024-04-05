@@ -1,0 +1,3 @@
+# Good practice to ignore the compiled files, because they can be regenerated differently on every machines
+func/add.js
+func/add.wasm
