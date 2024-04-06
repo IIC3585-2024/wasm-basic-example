@@ -14,8 +14,8 @@ function generateArrayAndPrint() {
     Module.HEAPU32.set(uint32Array, pointer / 4);
 
     // Call the sum_array function from the WASM module
-    const length = Module._sum_array(pointer, uint32Array.length);
-    console.log(`[JS] Sum: ${length}`);
+    const sum = Module._sum_array(pointer, uint32Array.length);
+    console.log(`[JS] Sum: ${sum}`);
     console.log("-------------------------")
 
     // Free the allocated memory
@@ -23,5 +23,5 @@ function generateArrayAndPrint() {
 
     // Display the result in the HTML
     const resultDiv = document.getElementById('printArrayResult');
-    resultDiv.textContent = `Array sum: ${length}`;
+    resultDiv.textContent = `Array sum: ${sum}`;
 }
